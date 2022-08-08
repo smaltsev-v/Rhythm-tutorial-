@@ -8,9 +8,12 @@
   font-style: normal;
 }
 /* политра 
+#121212 черны фон
+#262626 фон иконок
 #ff6428 основной 
 #121212 заголовки
 #868686 абзац
+#666666 серый текст блок why
 #666666 основной bg
 #eeeeee  второстепенный bg 
 #fffff белый текс
@@ -20,8 +23,11 @@
   --text-titel--: #121212;
   --text-secondary--: #868686;
   --text-white--: #ffffff;
+  --text-grey--: #666666;
   --bg-primaty-color--: #666666;
   --bg-secondary-color--: #eeeeee;
+  --bg-block-why--: #121212;
+  --bg-icon-why--: #262626;
   --background-color-menu: rgb(255, 255, 255, 0.8);
   --hover-button: #ba4619;
   --desctop: 1092px;
@@ -90,6 +96,8 @@ li {
 .page__catigories {
 }
 .page__brands {
+}
+.page__why {
 }
 /* -------container-------------- */
 [class*="__container"] {
@@ -581,5 +589,87 @@ li {
     row-gap: 20px;
     justify-content: center;
     grid-template-columns: repeat(2, auto);
+  }
+}
+/* ---------Why--------- */
+
+.why {
+  background-color: var(--bg-block-why--);
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.why__container {
+}
+.why__title {
+  margin-bottom: 35px;
+  color: var(--text-white--);
+}
+.why__items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 30px;
+}
+.why__item {
+}
+.item-why {
+  display: grid;
+  justify-items: center;
+  padding: 40px;
+  text-align: center;
+}
+.item-why__icon {
+  background: var(--bg-icon-why--);
+  border-radius: 20px;
+  display: flex;
+  width: 72px;
+  height: 72px;
+  justify-content: center;
+  align-items: center;
+}
+.item-why__icon:not(:last-child) {
+  margin-bottom: 40px;
+}
+.item-why__title {
+  text-transform: uppercase;
+  color: var(--text-white--);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+.item-why__title:not(:last-child) {
+  margin-bottom: 12px;
+}
+.item-why__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-grey--);
+}
+@media (max-width: 1092px) {
+}
+
+@media (max-width: 767.98px) {
+  .why {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .item-why {
+    padding: 30px;
+  }
+  .why__items {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 479.98px) {
+  .why {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .item-why {
+    padding: 20px;
+  }
+  .why__items {
+    grid-template-columns: repeat(1, auto);
   }
 }
